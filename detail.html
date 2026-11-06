@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Destinasi | Jelajah Ciamis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* ===== DETAIL WISATA ===== */
+
+        .destination-detail-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .destination-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            text-decoration: none;
+            color: #7451a6;
+            font-weight: 800;
+            margin-bottom: 28px;
+            transition: 0.3s;
+        }
+
+        .destination-back:hover {
+            transform: translateX(-5px);
+        }
+
+        .destination-hero {
+            width: 100%;
+            height: 450px;
+            border-radius: 25px;
+            overflow: hidden;
+            background: #eee7f5;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(50, 30, 80, 0.12);
+        }
+
+        .destination-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .destination-image-error {
+            display: none;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            color: #7451a6;
+            font-weight: 700;
+        }
+
+        .destination-image-error i {
+            font-size: 55px;
+        }
+
+        .destination-information {
+            background: #fff;
+            padding: 38px;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(50, 30, 80, 0.07);
+        }
+
+        .destination-category {
+            display: inline-block;
+            background: #f0e8fa;
+            color: #7451a6;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .destination-information h1 {
+            font-family: 'Baloo 2', cursive;
+            font-size: 38px;
+            line-height: 1.2;
+            color: #35234d;
+            margin: 0 0 12px;
+        }
+
+        .destination-location {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #777;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .destination-location i {
+            color: #a276d0;
+            font-size: 18px;
+        }
+
+        .destination-divider {
+            border: none;
+            border-top: 1px solid #eee8f3;
+            margin: 25px 0;
+        }
+
+        .destination-description h2 {
+            font-family: 'Baloo 2', cursive;
+            color: #35234d;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .destination-description p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.9;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .destination-map-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+            padding: 15px 25px;
+            border-radius: 14px;
+            background: #7451a6;
+            color: white;
+            text-decoration: none;
+            font-weight: 900;
+            transition: 0.3s;
+        }
+
+        .destination-map-button:hover {
+            background: #593785;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(116, 81, 166, 0.25);
+        }
+
+        .destination-map-button i {
+            font-size: 18px;
+        }
+
+        .destination-note {
+            margin-top: 28px;
+            padding: 18px 20px;
+            background: #f8f4fc;
+            border-left: 4px solid #a276d0;
+            border-radius: 10px;
+            color: #6d5b7e;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .destination-empty {
+            text-align: center;
+            background: white;
+            padding: 60px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(50, 30, 80, 0.07);
+        }
+
+        .destination-empty i {
+            font-size: 55px;
+            color: #a276d0;
+        }
+
+        .destination-empty h2 {
+            font-family: 'Baloo 2', cursive;
+            color: #35234d;
+            margin: 15px 0 8px;
+        }
+
+        .destination-empty p {
+            color: #777;
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 768px) {
+
+            .destination-detail-wrapper {
+                padding: 25px 16px 55px;
+            }
+
+            .destination-hero {
+                height: 260px;
+                border-radius: 18px;
+            }
+
+            .destination-information {
+                padding: 25px 20px;
+                border-radius: 18px;
+            }
+
+            .destination-information h1 {
+                font-size: 29px;
+            }
+
+            .destination-description h2 {
+                font-size: 22px;
+            }
+
+            .destination-description p {
+                font-size: 15px;
+                text-align: left;
+            }
+
+            .destination-map-button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .destination-hero {
+                height: 220px;
+            }
+
+            .destination-information h1 {
+                font-size: 25px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <i class="bi bi-compass-fill"></i>
+            Jelajah<span class="logo-highlight">Ciamis.</span>
+        </a>
+
+        <nav>
+            <a href="index.html#beranda">Beranda</a>
+            <a href="index.html#destinasi">Jelajahi Wisata</a>
+            <a href="index.html#tentang">Tentang</a>
+        </nav>
+
+    </header>
+
+
+    <!-- KONTEN DETAIL -->
+    <main class="destination-detail-wrapper">
+
+        <a href="index.html#destinasi" class="destination-back">
+            <i class="bi bi-arrow-left"></i>
+            Kembali ke Destinasi
+        </a>
+
+        <div id="detailContent"></div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <i class="bi bi-compass-fill"></i>
+            Jelajah Ciamis.
+        </div>
+
+        <p>Temukan Keindahan, Kenali Potensi, Jelajahi Ciamis.</p>
+
+        <span>© 2026 Jelajah Ciamis. All Rights Reserved.</span>
+
+    </footer>
+
+
+    <script>
+
+        // Data destinasi wisata
+        const destinations = {
+
+            "situ-lengkong": {
+                name: "Situ Lengkong Panjalu",
+                category: "Wisata Alam & Sejarah",
+                location: "Panjalu, Kabupaten Ciamis",
+
+                image: "images/Situ Lengkong.jpg",
+
+                description:
+                    "Situ Lengkong merupakan danau yang berada di Kecamatan Panjalu, Kabupaten Ciamis. Destinasi ini memiliki keterkaitan dengan sejarah Kerajaan Panjalu dan kawasan Nusa Gede.",
+
+                maps:
+                    "https://www.google.com/maps/search/?api=1&query=Situ+Lengkong+Panjalu+Ciamis"
+            },
+
+            "curug-tujuh": {
+                name: "Curug Tujuh Cibolang",
+                category: "Wisata Alam",
+                location: "Panjalu, Kabupaten Ciamis",
+
+                image: "images/Curug Tujuh.jpg",
+
+                description:
+                    "Curug Tujuh Cibolang merupakan kawasan wisata air terjun yang dikenal memiliki tujuh curug dan berada di kawasan kaki Gunung Sawal.",
+
+                maps:
+                    "https://www.google.com/maps/search/?api=1&query=Curug+Tujuh+Cibolang+Ciamis"
+            },
+
+            "kampung-adat-kuta": {
+                name: "Kampung Adat Kuta",
+                category: "Wisata Budaya",
+                location: "Tambaksari, Kabupaten Ciamis",
+
+                image: "images/Kampung Adat Kuta.jpg",
+
+                description:
+                    "Kampung Adat Kuta merupakan kawasan masyarakat adat Sunda yang memiliki tradisi dan kearifan lokal yang masih dijaga oleh masyarakatnya.",
+
+                maps:
+                    "https://www.google.com/maps/search/?api=1&query=Kampung+Adat+Kuta+Ciamis"
+            },
+
+            "cadas-ngampar": {
+                name: "Cadas Ngampar",
+                category: "Wisata Alam",
+                location: "Sadananya, Kabupaten Ciamis",
+
+                image: "images/Cadas Ngampar.jpg",
+
+                description:
+                    "Cadas Ngampar merupakan salah satu destinasi wisata alam yang berada di wilayah Kecamatan Sadananya, Kabupaten Ciamis.",
+
+                maps:
+                    "https://www.google.com/maps/search/?api=1&query=Cadas+Ngampar+Sadananya+Ciamis"
+            }
+
+        };
+
+
+        // Membaca kode destinasi dari URL
+        const params = new URLSearchParams(window.location.search);
+
+        const destinationId = params.get("destinasi");
+
+        const destination = destinations[destinationId];
+
+
+        // Mengambil tempat untuk menampilkan detail
+        const detailContent = document.getElementById("detailContent");
+
+
+        // Menampilkan detail destinasi
+        if (destination) {
+
+            document.title = destination.name + " | Jelajah Ciamis";
+
+            detailContent.innerHTML = `
+
+                <div class="destination-hero">
+
+                    <img
+                        id="destinationImage"
+                        src="${destination.image}"
+                        alt="Foto ${destination.name}"
+                    >
+
+                    <div class="destination-image-error" id="imageError">
+                        <i class="bi bi-image"></i>
+                        <span>Foto destinasi belum dapat ditampilkan.</span>
+                    </div>
+
+                </div>
+
+                <section class="destination-information">
+
+                    <span class="destination-category">
+                        ${destination.category}
+                    </span>
+
+                    <h1>${destination.name}</h1>
+
+                    <p class="destination-location">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        ${destination.location}
+                    </p>
+
+                    <hr class="destination-divider">
+
+                    <div class="destination-description">
+
+                        <h2>Tentang Destinasi</h2>
+
+                        <p>${destination.description}</p>
+
+                    </div>
+
+                    <a
+                        href="${destination.maps}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="destination-map-button"
+                    >
+                        <i class="bi bi-map-fill"></i>
+                        Lihat Lokasi di Google Maps
+                    </a>
+
+                    <div class="destination-note">
+                        <i class="bi bi-info-circle-fill"></i>
+                        Informasi mengenai destinasi ini disajikan
+                        untuk membantu pengunjung mengenal potensi
+                        wisata yang ada di Kabupaten Ciamis.
+                    </div>
+
+                </section>
+
+            `;
+
+            // Menangani jika foto gagal dimuat
+            const destinationImage =
+                document.getElementById("destinationImage");
+
+            const imageError =
+                document.getElementById("imageError");
+
+            destinationImage.onerror = function () {
+                this.style.display = "none";
+                imageError.style.display = "flex";
+
+                console.error(
+                    "Foto gagal dimuat:",
+                    this.src
+                );
+            };
+
+        } else {
+
+            document.title = "Destinasi Tidak Ditemukan | Jelajah Ciamis";
+
+            detailContent.innerHTML = `
+
+                <div class="destination-empty">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <h2>Destinasi Tidak Ditemukan</h2>
+
+                    <p>
+                        Maaf, informasi destinasi yang kamu cari
+                        belum tersedia.
+                    </p>
+
+                    <a
+                        href="index.html#destinasi"
+                        class="destination-map-button"
+                    >
+                        <i class="bi bi-arrow-left"></i>
+                        Kembali ke Halaman Utama
+                    </a>
+
+                </div>
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+</html>

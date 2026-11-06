@@ -1,0 +1,1027 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jelajah Ciamis | Wisata, Budaya & Potensi Lokal</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .umkm-detail-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: #593477;
+            color: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: .2s ease;
+        }
+        .umkm-detail-button:hover {
+            background: #A77BC8;
+            transform: translateY(-2px);
+        }
+    </style>
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="#beranda" class="logo">
+            <span class="logo-icon">
+                <i class="bi bi-compass-fill"></i>
+            </span>
+            Jelajah<span class="logo-highlight">Ciamis.</span>
+        </a>
+
+        <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#kategori">Kategori</a>
+    <a href="#destinasi">Jelajahi Wisata</a>
+    <a href="#budaya">Budaya</a>
+    <a href="#umkm">UMKM Lokal</a>
+    <a href="#tentang">Tentang</a>
+</nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="beranda">
+
+            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-decoration decoration-two"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    JELAJAHI KABUPATEN CIAMIS
+                </div>
+
+                <h1>
+                    Ada Banyak Cerita
+                    di Balik <span>Keindahan Ciamis.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Temukan keindahan alam, kekayaan budaya,
+                    jejak sejarah, dan potensi lokal yang
+                    menjadikan Ciamis istimewa.
+                </p>
+
+                <a href="#destinasi" class="hero-button">
+                    Mulai Jelajahi
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <div class="hero-note">
+                    <i class="bi bi-flower1"></i>
+                    Explore the Hidden Beauty of Ciamis
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- KATEGORI -->
+        <section class="categories" id="kategori">
+
+            <div class="section-heading">
+
+                <p class="section-label">TEMUKAN PENGALAMANMU</p>
+
+                <h2>Jelajahi Ciamis Lebih Dekat</h2>
+
+                <p class="section-description">
+                    Dari alam hingga budaya, ada banyak hal
+                    menarik yang bisa kamu temukan di Ciamis.
+                </p>
+
+            </div>
+
+            <div class="category-list">
+
+                <div class="category-card">
+
+                    <div class="category-icon nature-icon">
+                        <i class="bi bi-tree-fill"></i>
+                    </div>
+
+                    <h3>Wisata Alam</h3>
+
+                    <p>
+                        Menikmati pesona alam dan keindahan Ciamis.
+                    </p>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="category-icon culture-icon">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </div>
+
+                    <h3>Wisata Budaya</h3>
+
+                    <p>
+                        Mengenal tradisi dan kearifan lokal masyarakat.
+                    </p>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="category-icon history-icon">
+                        <i class="bi bi-bank2"></i>
+                    </div>
+
+                    <h3>Wisata Sejarah</h3>
+
+                    <p>
+                        Menelusuri jejak sejarah dan warisan masa lalu.
+                    </p>
+
+                </div>
+
+
+                <div class="category-card">
+
+                    <div class="category-icon umkm-icon">
+                        <i class="bi bi-basket2-fill"></i>
+                    </div>
+
+                    <h3>UMKM Lokal</h3>
+
+                    <p>
+                        Mendukung produk kreatif dan unggulan masyarakat.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTINASI WISATA -->
+        <section class="destinations" id="destinasi">
+
+            <div class="section-heading">
+
+                <p class="section-label">PESONA KABUPATEN CIAMIS</p>
+
+                <h2>Destinasi Pilihan</h2>
+
+                <p class="section-description">
+                    Yuk, temukan tempat menarik dan pengalaman
+                    baru dari berbagai sudut Kabupaten Ciamis.
+                </p>
+
+            </div>
+
+
+            <!-- FITUR PENCARIAN DAN FILTER -->
+            <div class="destination-tools">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Cari destinasi wisata..."
+                    >
+
+                </div>
+
+
+                <div class="filter-list">
+
+                    <button class="filter-btn active" data-filter="semua">
+                        Semua
+                    </button>
+
+                    <button class="filter-btn" data-filter="alam">
+                        <i class="bi bi-tree-fill"></i>
+                        Wisata Alam
+                    </button>
+
+                    <button class="filter-btn" data-filter="budaya">
+                        <i class="bi bi-music-note-beamed"></i>
+                        Wisata Budaya
+                    </button>
+
+                    <button class="filter-btn" data-filter="sejarah">
+                        <i class="bi bi-bank2"></i>
+                        Wisata Sejarah
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DAFTAR KARTU DESTINASI -->
+            <div class="destination-list">
+
+
+                <!-- SITU LENGKONG PANJALU -->
+                <div class="destination-card" data-category="alam sejarah">
+
+                    <div class="destination-image lake">
+
+                        <span class="image-tag">
+                            <i class="bi bi-water"></i>
+                            Alam & Sejarah
+                        </span>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <span class="destination-category">
+                            WISATA ALAM & SEJARAH
+                        </span>
+
+                        <h3>Situ Lengkong Panjalu</h3>
+
+                        <p>
+                            Danau yang memiliki kaitan erat dengan
+                            sejarah Kerajaan Panjalu dan kawasan Nusa Gede.
+                        </p>
+
+                        <div class="destination-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Panjalu, Ciamis
+                        </div>
+
+                        <a href="detail.html?destinasi=situ-lengkong" class="detail-button">
+    Lihat Detail <i class="bi bi-arrow-right"></i>
+</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CURUG TUJUH CIBOLANG -->
+                <div class="destination-card" data-category="alam">
+
+                    <div class="destination-image waterfall">
+
+                        <span class="image-tag">
+                            <i class="bi bi-droplet-fill"></i>
+                            Wisata Alam
+                        </span>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <span class="destination-category">
+                            WISATA ALAM
+                        </span>
+
+                        <h3>Curug Tujuh Cibolang</h3>
+
+                        <p>
+                            Kawasan wisata air terjun yang memiliki
+                            tujuh curug di kaki Gunung Sawal.
+                        </p>
+
+                        <div class="destination-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Panjalu, Ciamis
+                        </div>
+
+                        <a href="detail.html?destinasi=curug-tujuh" class="detail-button">
+    Lihat Detail <i class="bi bi-arrow-right"></i>
+</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- KAMPUNG ADAT KUTA -->
+                <div class="destination-card" data-category="budaya">
+
+                    <div class="destination-image village">
+
+                        <span class="image-tag">
+                            <i class="bi bi-house-heart-fill"></i>
+                            Wisata Budaya
+                        </span>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <span class="destination-category">
+                            WISATA BUDAYA
+                        </span>
+
+                        <h3>Kampung Adat Kuta</h3>
+
+                        <p>
+                            Destinasi budaya untuk mengenal kehidupan
+                            dan kearifan masyarakat adat Sunda.
+                        </p>
+
+                        <div class="destination-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Tambaksari, Ciamis
+                        </div>
+
+                        <a href="detail.html?destinasi=kampung-adat-kuta" class="detail-button">
+    Lihat Detail <i class="bi bi-arrow-right"></i>
+</a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CADAS NGAMPAR -->
+                <div class="destination-card" data-category="alam">
+
+                    <div class="destination-image river">
+
+                        <span class="image-tag">
+                            <i class="bi bi-water"></i>
+                            Wisata Alam
+                        </span>
+
+                    </div>
+
+                    <div class="destination-info">
+
+                        <span class="destination-category">
+                            WISATA ALAM
+                        </span>
+
+                        <h3>Cadas Ngampar</h3>
+
+                        <p>
+                            Salah satu destinasi wisata alam yang
+                            berada di wilayah Kecamatan Sadananya.
+                        </p>
+
+                        <div class="destination-location">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Sadananya, Ciamis
+                        </div>
+
+                        <a href="detail.html?destinasi=cadas-ngampar" class="detail-button">
+    Lihat Detail <i class="bi bi-arrow-right"></i>
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PESAN JIKA HASIL TIDAK DITEMUKAN -->
+            <p id="emptyMessage" class="empty-message">
+                Wah, destinasi yang kamu cari belum ditemukan.
+                Coba gunakan kata kunci lainnya, ya!
+            </p>
+
+        </section>
+
+<!-- KATALOG UMKM LOKAL -->
+<section class="umkm-section" id="umkm">
+    <div class="section-heading">
+        <p class="section-label">DUKUNG PRODUK LOKAL</p>
+        <h2>Bangga Produk Lokal Ciamis!</h2>
+        <p class="section-description">
+            Kenali produk unggulan dan karya kreatif masyarakat Kabupaten Ciamis.
+        </p>
+    </div>
+
+    <!-- PENCARIAN DAN FILTER UMKM -->
+    <div class="umkm-tools">
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" id="umkmSearch" placeholder="Cari produk atau nama UMKM...">
+        </div>
+
+        <div class="filter-list">
+            <button class="umkm-filter active" data-filter="semua">Semua</button>
+            <button class="umkm-filter" data-filter="camilan">
+                <i class="bi bi-cup-straw"></i> Camilan
+            </button>
+            <button class="umkm-filter" data-filter="olahan">
+                <i class="bi bi-basket-fill"></i> Olahan Pangan
+            </button>
+        </div>
+    </div>
+
+    <!-- DAFTAR PRODUK UMKM -->
+    <div class="umkm-list">
+        <!-- MORO-MORO GALENDO -->
+        <div class="umkm-card" data-category="camilan">
+
+            <div class="umkm-image galendo-image">
+                <span class="umkm-tag">Makanan Khas</span>
+            </div>
+
+            <div class="umkm-info">
+
+                <span class="umkm-category">MAKANAN TRADISIONAL</span>
+
+                <h3>Moro-Moro Galendo</h3>
+
+                <p>
+                    Produk galendo khas Ciamis yang dibuat
+                    dari bahan baku kelapa dan menjadi salah
+                    satu pilihan oleh-oleh lokal.
+                </p>
+
+                <div class="umkm-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Cigembor, Kecamatan Ciamis
+                </div>
+
+                <span class="umkm-note">
+                    Informasi produk berdasarkan katalog UMKM Ciamis.
+                </span>
+
+            </div>
+
+        
+            <a href="detail-umkm.html?umkm=moro-moro-galendo" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <!-- BOGA RASA -->
+        <div class="umkm-card" data-category="camilan">
+
+            <div class="umkm-image tempe-image">
+                <span class="umkm-tag">Camilan Lokal</span>
+            </div>
+
+            <div class="umkm-info">
+
+                <span class="umkm-category">MAKANAN RINGAN</span>
+
+                <h3>Boga Rasa</h3>
+
+                <p>
+                    Produk keripik tempe yang dibuat dari
+                    bahan tempe, tepung, dan bumbu sebagai
+                    camilan khas produksi lokal.
+                </p>
+
+                <div class="umkm-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Tanjungsari, Sadananya
+                </div>
+
+                <span class="umkm-note">
+                    Informasi produk berdasarkan katalog UMKM Ciamis.
+                </span>
+
+            </div>
+
+        
+            <a href="detail-umkm.html?umkm=boga-rasa" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <!-- KOPI KI ADUL -->
+        <div class="umkm-card" data-category="olahan">
+
+            <div class="umkm-image coffee-image">
+                <span class="umkm-tag">Produk Lokal</span>
+            </div>
+
+            <div class="umkm-info">
+
+                <span class="umkm-category">KOPI LOKAL</span>
+
+                <h3>Kopi Ki Adul</h3>
+
+                <p>
+                    Produk kopi dari usaha Kopi Leuweung Roastery
+                    yang mengolah biji kopi menjadi produk kopi lokal.
+                </p>
+
+                <div class="umkm-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Maleber, Kecamatan Ciamis
+                </div>
+
+                <span class="umkm-note">
+                    Informasi produk berdasarkan katalog UMKM Ciamis.
+                </span>
+
+            </div>
+
+        
+            <a href="detail-umkm.html?umkm=kopi-ki-adul" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- RAJAWALI ABON AYAM -->
+        <div class="umkm-card" data-category="olahan">
+            <div class="umkm-image umkm-abon"><i class="bi bi-egg-fried"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">OLAHAN PANGAN</span>
+                <h3>Rajawali Abon Ayam</h3>
+                <p>Produk abon ayam dari pelaku usaha lokal Kabupaten Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Nama produk tercantum dalam pemberitaan UMKM lokal Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=rajawali-abon-ayam" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- MELATI CIMPRING -->
+        <div class="umkm-card" data-category="camilan">
+            <div class="umkm-image umkm-cimpring"><i class="bi bi-circle-fill"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">CAMILAN LOKAL</span>
+                <h3>Melati Cimpring</h3>
+                <p>Produk cimpring lokal yang termasuk dalam ragam camilan UMKM Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Nama produk tercantum dalam pemberitaan UMKM lokal Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=melati-cimpring" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- SRIKANDI JAMUR CRISPY -->
+        <div class="umkm-card" data-category="camilan">
+            <div class="umkm-image umkm-jamur"><i class="bi bi-flower2"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">CAMILAN LOKAL</span>
+                <h3>Srikandi Jamur Crispy</h3>
+                <p>Produk olahan jamur crispy dari pelaku usaha lokal Kabupaten Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Nama produk tercantum dalam pemberitaan UMKM lokal Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=srikandi-jamur-crispy" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- DANGDEUR BAROKAH LANTING -->
+        <div class="umkm-card" data-category="camilan">
+            <div class="umkm-image umkm-lanting"><i class="bi bi-circle-square"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">CAMILAN LOKAL</span>
+                <h3>Dangdeur Barokah Lanting</h3>
+                <p>Produk lanting lokal yang menjadi bagian dari ragam camilan UMKM Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Nama produk tercantum dalam pemberitaan UMKM lokal Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=dangdeur-barokah-lanting" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- MUKTI JAYA SALE PISANG -->
+        <div class="umkm-card" data-category="camilan">
+            <div class="umkm-image umkm-sale"><i class="bi bi-basket2-fill"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">CAMILAN LOKAL</span>
+                <h3>Mukti Jaya Sale Pisang</h3>
+                <p>Produk sale pisang dari pelaku usaha lokal Kabupaten Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Nama produk tercantum dalam pemberitaan UMKM lokal Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=mukti-jaya-sale-pisang" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- GULA AREN NANANG FOOD -->
+        <div class="umkm-card" data-category="olahan">
+            <div class="umkm-image umkm-gula"><i class="bi bi-droplet-fill"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">OLAHAN PANGAN</span>
+                <h3>Gula Aren Nanang Food</h3>
+                <p>Produk olahan gula aren dari IKM binaan DKUKMP Kabupaten Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Informasi produk bersumber dari publikasi DKUKMP Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=gula-aren-nanang-food" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- TERASI BUBUK TJAP BOEMI GALUH -->
+        <div class="umkm-card" data-category="olahan">
+            <div class="umkm-image umkm-terasi"><i class="bi bi-basket2-fill"></i></div>
+            <div class="umkm-info">
+                <span class="umkm-category">OLAHAN PANGAN</span>
+                <h3>Tjap Boemi Galuh</h3>
+                <p>Produk terasi bubuk dari IKM binaan DKUKMP Kabupaten Ciamis.</p>
+                <div class="umkm-location"><i class="bi bi-geo-alt-fill"></i> Kabupaten Ciamis</div>
+                <span class="umkm-note">Informasi produk bersumber dari publikasi DKUKMP Ciamis.</span>
+            </div>
+        
+            <a href="detail-umkm.html?umkm=tjap-boemi-galuh" class="umkm-detail-button">
+                Info Lengkap <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <p id="umkmEmptyMessage" class="empty-message" style="display: none;">
+        Produk yang kamu cari belum ditemukan. Coba kata kunci lainnya, ya!
+    </p>
+
+    <p class="umkm-source-note">
+        Data nama produk dihimpun dari publikasi pemerintah daerah dan pemberitaan
+        mengenai UMKM Kabupaten Ciamis. Informasi kontak dan pembelian akan ditambahkan
+        setelah diverifikasi.
+    </p>
+</section>
+
+
+<!-- BUDAYA DAN KEARIFAN LOKAL -->
+<section class="culture-section" id="budaya">
+
+    <div class="section-heading">
+        <p class="section-label">WARISAN BUDAYA TATAR GALUH</p>
+
+        <h2>Mengenal Budaya dan Tradisi Ciamis</h2>
+
+        <p class="section-description">
+            Menelusuri tradisi, adat istiadat, dan kearifan lokal
+            yang masih dijaga oleh masyarakat Kabupaten Ciamis.
+        </p>
+    </div>
+
+    <div class="culture-list">
+
+        <!-- NYANGKU -->
+        <article class="culture-card">
+            <div class="culture-icon culture-nyangku">
+                <i class="bi bi-droplet-half"></i>
+            </div>
+
+            <div class="culture-info">
+                <span class="culture-label">UPACARA ADAT</span>
+                <h3>Tradisi Nyangku</h3>
+
+                <p>
+                    Tradisi masyarakat Panjalu berupa prosesi
+                    pencucian benda-benda pusaka peninggalan leluhur.
+                    Nyangku menjadi bentuk penghormatan terhadap
+                    sejarah dan warisan budaya Panjalu.
+                </p>
+
+                <span class="culture-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Panjalu, Ciamis
+                </span>
+
+                <a href="detail-budaya.html?budaya=nyangku" class="culture-button">
+    Pelajari Tradisi <i class="bi bi-arrow-right"></i>
+</a>
+            </div>
+        </article>
+
+
+        <!-- NYUGUH -->
+        <article class="culture-card">
+            <div class="culture-icon culture-nyuguh">
+                <i class="bi bi-basket2-fill"></i>
+            </div>
+
+            <div class="culture-info">
+                <span class="culture-label">TRADISI MASYARAKAT</span>
+                <h3>Tradisi Nyuguh</h3>
+
+                <p>
+                    Tradisi turun-temurun masyarakat Kampung Adat
+                    Kuta sebagai ungkapan rasa syukur atas hasil
+                    bumi. Rangkaian acaranya meliputi arak-arakan
+                    dongdang dan makan bersama.
+                </p>
+
+                <span class="culture-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Tambaksari, Ciamis
+                </span>
+                <a href="detail-budaya.html?budaya=nyuguh" class="culture-button">
+    Pelajari Tradisi <i class="bi bi-arrow-right"></i>
+</a>
+            </div>
+        </article>
+
+
+        <!-- MISALIN -->
+        <article class="culture-card">
+            <div class="culture-icon culture-misalin">
+                <i class="bi bi-flower1"></i>
+            </div>
+
+            <div class="culture-info">
+                <span class="culture-label">TRADISI ADAT</span>
+                <h3>Tradisi Misalin</h3>
+
+                <p>
+                    Tradisi masyarakat Ciamis yang dilaksanakan
+                    menjelang bulan Ramadan. Misalin mengandung
+                    makna membersihkan diri serta mempererat
+                    silaturahmi dan kebersamaan.
+                </p>
+
+                <span class="culture-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Cimaragas, Ciamis
+                </span>
+                <a href="detail-budaya.html?budaya=misalin" class="culture-button">
+    Pelajari Tradisi <i class="bi bi-arrow-right"></i>
+</a>
+            </div>
+        </article>
+
+
+        <!-- KAMPUNG ADAT KUTA -->
+        <article class="culture-card">
+            <div class="culture-icon culture-kuta">
+                <i class="bi bi-house-heart-fill"></i>
+            </div>
+
+            <div class="culture-info">
+                <span class="culture-label">WARISAN BUDAYA</span>
+                <h3>Kampung Adat Kuta</h3>
+
+                <p>
+                    Kampung adat yang mempertahankan aturan
+                    leluhur, tradisi, dan kehidupan masyarakat
+                    yang menjunjung kesederhanaan, gotong royong,
+                    serta keseimbangan dengan alam.
+                </p>
+
+                <span class="culture-location">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Tambaksari, Ciamis
+                </span>
+                <a href="detail-budaya.html?budaya=kampung-kuta" class="culture-button">
+    Pelajari Tradisi <i class="bi bi-arrow-right"></i>
+</a>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="culture-source">
+        Informasi budaya dirangkum dari publikasi Pemerintah
+        Kabupaten Ciamis dan sumber kebudayaan terkait.
+    </p>
+
+</section>
+
+<!-- TENTANG JELAJAH CIAMIS -->
+        <section class="about" id="tentang">
+
+            <div class="about-icon">
+                <i class="bi bi-compass-fill"></i>
+            </div>
+
+            <p class="section-label">KENALI LEBIH DEKAT</p>
+
+            <h2>Tentang Jelajah Ciamis</h2>
+
+            <p>
+                Jelajah Ciamis merupakan portal informasi digital
+                yang bertujuan memperkenalkan destinasi wisata,
+                budaya, sejarah, serta potensi lokal Kabupaten Ciamis.
+                Melalui platform ini, masyarakat dan wisatawan dapat
+                mengenal lebih dekat berbagai keunikan yang dimiliki Ciamis.
+            </p>
+
+            <a href="#destinasi" class="about-button">
+                Temukan Pesona Ciamis
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <i class="bi bi-compass-fill"></i>
+            Jelajah Ciamis.
+        </div>
+
+        <p>
+            Temukan Keindahan, Kenali Potensi, Jelajahi Ciamis.
+        </p>
+
+        <span>
+            © 2026 Jelajah Ciamis. All Rights Reserved.
+        </span>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT: PENCARIAN DAN FILTER -->
+    <script>
+
+        // Mengambil elemen dari HTML
+        const searchInput = document.getElementById("searchInput");
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+
+        const destinationCards = document.querySelectorAll(".destination-card");
+
+        const emptyMessage = document.getElementById("emptyMessage");
+
+
+        // Menentukan kategori yang sedang dipilih
+        let selectedCategory = "semua";
+
+
+        // Fungsi pencarian dan filter
+        function filterDestinations() {
+
+            // Mengambil kata yang diketik pengunjung
+            const searchText = searchInput.value.toLowerCase().trim();
+
+            // Menghitung jumlah destinasi yang ditemukan
+            let visibleCount = 0;
+
+
+            destinationCards.forEach(function(card) {
+
+                // Mengambil seluruh teks dalam kartu
+                const cardText = card.textContent.toLowerCase();
+
+                // Mengambil kategori destinasi
+                const cardCategory = card.dataset.category.split(" ");
+
+                // Memeriksa kecocokan kata pencarian
+                const matchesSearch = cardText.includes(searchText);
+
+                // Memeriksa kecocokan kategori
+                const matchesCategory =
+                    selectedCategory === "semua" ||
+                    cardCategory.includes(selectedCategory);
+
+
+                // Menampilkan atau menyembunyikan kartu
+                if (matchesSearch && matchesCategory) {
+
+                    card.style.display = "";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+
+            // Menampilkan pesan jika tidak ada hasil
+            if (visibleCount === 0) {
+
+                emptyMessage.style.display = "block";
+
+            } else {
+
+                emptyMessage.style.display = "none";
+
+            }
+
+        }
+
+
+        // Menjalankan pencarian ketika pengunjung mengetik
+        searchInput.addEventListener("input", filterDestinations);
+
+
+        // Menjalankan filter ketika tombol kategori diklik
+        filterButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                // Mengubah kategori yang dipilih
+                selectedCategory = button.dataset.filter;
+
+                // Menghapus status aktif dari semua tombol
+                filterButtons.forEach(function(btn) {
+
+                    btn.classList.remove("active");
+
+                });
+
+                // Memberikan status aktif pada tombol terpilih
+                button.classList.add("active");
+
+                // Menjalankan filter destinasi
+                filterDestinations();
+
+            });
+
+        });
+
+// ===================================
+        // FITUR PENCARIAN DAN FILTER UMKM
+        // ===================================
+
+        const umkmSearch = document.getElementById("umkmSearch");
+        const umkmFilterButtons = document.querySelectorAll(".umkm-filter");
+        const umkmCards = document.querySelectorAll(".umkm-card");
+        const umkmEmptyMessage = document.getElementById("umkmEmptyMessage");
+
+        let selectedUmkmCategory = "semua";
+
+        function filterUmkm() {
+            const searchText = umkmSearch.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            umkmCards.forEach(function(card) {
+                const cardText = card.textContent.toLowerCase();
+                const cardCategory = card.dataset.category;
+
+                const matchesSearch = cardText.includes(searchText);
+                const matchesCategory =
+                    selectedUmkmCategory === "semua" ||
+                    cardCategory === selectedUmkmCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    card.style.display = "";
+                    visibleCount++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            umkmEmptyMessage.style.display =
+                visibleCount === 0 ? "block" : "none";
+        }
+
+        umkmSearch.addEventListener("input", filterUmkm);
+
+        umkmFilterButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                selectedUmkmCategory = button.dataset.filter;
+
+                umkmFilterButtons.forEach(function(btn) {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+                filterUmkm();
+            });
+        });
+
+</script>
+
+</body>
+</html>

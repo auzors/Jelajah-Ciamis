@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail UMKM Lokal | Jelajah Ciamis</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .umkm-detail-page {
+            min-height: 75vh;
+            padding: 45px 7% 80px;
+            background: #FBF8FC;
+        }
+
+        .umkm-detail-card {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(65, 35, 80, 0.08);
+            border: 1px solid #F0E8F5;
+        }
+
+        .umkm-detail-visual {
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #EDE3F3, #F5E7CF);
+            color: #76558D;
+            font-size: 100px;
+        }
+
+        .umkm-detail-content {
+            padding: 40px;
+        }
+
+        .umkm-detail-category {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #F1E5F5;
+            color: #8054A0;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .umkm-detail-content h1 {
+            color: #593477;
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .umkm-detail-description {
+            color: #817487;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
+        .umkm-detail-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .umkm-info-box {
+            padding: 20px;
+            background: #FBF8FC;
+            border: 1px solid #F0E8F5;
+            border-radius: 15px;
+        }
+
+        .umkm-info-box h3 {
+            color: #593477;
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .umkm-info-box p {
+            color: #817487;
+            font-size: 13px;
+        }
+
+        .umkm-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 20px;
+            background: #593477;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.3s;
+        }
+
+        .umkm-back:hover {
+            background: #A77BC8;
+            transform: translateY(-2px);
+        }
+
+        .umkm-not-found {
+            text-align: center;
+            padding: 70px 20px;
+            color: #817487;
+        }
+
+        .umkm-not-found h2 {
+            color: #593477;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .umkm-detail-page {
+                padding: 25px 5% 55px;
+            }
+
+            .umkm-detail-visual {
+                min-height: 220px;
+                font-size: 75px;
+            }
+
+            .umkm-detail-content {
+                padding: 25px;
+            }
+
+            .umkm-detail-content h1 {
+                font-size: 30px;
+            }
+
+            .umkm-detail-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <i class="bi bi-compass logo-icon"></i>
+            Jelajah <span class="logo-highlight">Ciamis</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="index.html#umkm">UMKM Lokal</a>
+            <a href="index.html#budaya">Budaya</a>
+        </nav>
+    </header>
+
+    <main class="umkm-detail-page">
+        <div id="umkmDetail"></div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <i class="bi bi-compass"></i> Jelajah Ciamis
+        </div>
+        <p>Temukan Keindahan, Kenali Potensi, Jelajahi Ciamis.</p>
+        <span>© 2026 Jelajah Ciamis</span>
+    </footer>
+
+    <script>
+        const daftarUMKM = {
+            "moro-moro-galendo": {
+                nama: "Moro-Moro Galendo",
+                kategori: "Makanan Khas",
+                ikon: "bi-box-seam",
+                deskripsi: "Moro-Moro Galendo merupakan salah satu produk UMKM lokal yang berkaitan dengan galendo, makanan khas yang dikenal sebagai salah satu produk olahan kelapa dari Ciamis.",
+                lokasi: "Kelurahan Cigembor, Kecamatan Ciamis, Kabupaten Ciamis",
+                whatsapp: "085321232762"
+            },
+
+            "boga-rasa": {
+                nama: "Boga Rasa",
+                kategori: "Produk Kuliner",
+                ikon: "bi-basket",
+                deskripsi: "Boga Rasa merupakan usaha keripik tempe yang dibuat dari irisan tempe, tepung, dan bumbu sebelum digoreng.",
+                lokasi: "Dusun Citulang RT 03 RW 05, Desa Tanjungsari, Kecamatan Sadananya, Kabupaten Ciamis",
+                whatsapp: ""
+            },
+
+            "kopi-ki-adul": {
+                nama: "Kopi Ki Adul",
+                kategori: "Produk Kopi",
+                ikon: "bi-cup-hot",
+                deskripsi: "Kopi Ki Adul merupakan produk kopi dari Kopi Leuweung Roastery. Pengolahannya mencakup proses roasting biji kopi hingga menjadi kopi siap konsumsi.",
+                lokasi: "Jl. Kedung Panjang RT 01 RW 01, Kelurahan Maleber, Kabupaten Ciamis",
+                whatsapp: "081323063066"
+            },
+
+            "rajawali-abon-ayam": {
+                nama: "Rajawali Abon Ayam",
+                kategori: "Olahan Makanan",
+                ikon: "bi-egg-fried",
+                deskripsi: "Rajawali Ibu Iloh 1968 merupakan usaha olahan pangan khas Ciamis yang memproduksi abon dan dendeng, termasuk varian abon ayam.",
+                lokasi: "Toko Abon Rajawali, Jl. Rancapetir No. 27 RT 02/28, Kecamatan Ciamis, Kabupaten Ciamis",
+                whatsapp: "085223566566"
+            },
+
+            "melati-cimpring": {
+                nama: "Melati Cimpring",
+                kategori: "Makanan Tradisional",
+                ikon: "bi-circle",
+                deskripsi: "Melati Cimpring merupakan produk UMKM yang berkaitan dengan cimpring, salah satu camilan tradisional yang dikenal di wilayah Sunda.",
+                lokasi: "Informasi lokasi belum tersedia."
+            },
+
+            "srikandi-jamur-crispy": {
+                nama: "Srikandi Jamur Crispy",
+                kategori: "Olahan Makanan",
+                ikon: "bi-flower1",
+                deskripsi: "Srikandi Jamur Crispy merupakan camilan berbahan jamur yang terdaftar pada e-Katalog Dinas Kehutanan Provinsi Jawa Barat.",
+                lokasi: "Kabupaten Ciamis",
+                whatsapp: "087817064540"
+            },
+
+            "dangdeur-barokah-lanting": {
+                nama: "Dangdeur Barokah Lanting",
+                kategori: "Makanan Ringan",
+                ikon: "bi-circle-square",
+                deskripsi: "Dangdeur Barokah Lanting merupakan salah satu produk UMKM lokal berupa lanting, yaitu camilan tradisional.",
+                lokasi: "Informasi lokasi belum tersedia."
+            },
+
+            "mukti-jaya-sale-pisang": {
+                nama: "Mukti Jaya Sale Pisang",
+                kategori: "Olahan Buah",
+                ikon: "bi-basket2",
+                deskripsi: "Mukti Jaya Sale Pisang merupakan produk olahan pisang yang dikenal sebagai salah satu camilan tradisional.",
+                lokasi: "Informasi lokasi belum tersedia."
+            },
+
+            "gula-aren-nanang-food": {
+                nama: "Gula Aren Nanang Food",
+                kategori: "Produk Pangan",
+                ikon: "bi-cup",
+                deskripsi: "Gula Aren Nanang Food merupakan produk UMKM lokal yang bergerak dalam pengolahan dan penyediaan gula aren.",
+                lokasi: "Informasi lokasi belum tersedia."
+            },
+
+            "tjap-boemi-galuh": {
+                nama: "Tjap Boemi Galuh",
+                kategori: "Produk Lokal",
+                ikon: "bi-shop",
+                deskripsi: "Tjap Boemi Galuh merupakan produk terasi bubuk yang diolah dengan cara disangrai, kemudian dibubukkan dan dikemas.",
+                lokasi: "Jl. Sadananya No. 67, Dusun Landeuh RT 03 RW 04, Desa Sadananya, Kecamatan Sadananya, Kabupaten Ciamis",
+                whatsapp: "085117352045"
+            }
+        };
+
+        const parameter = new URLSearchParams(window.location.search);
+        const idUMKM = parameter.get("umkm");
+        const produk = daftarUMKM[idUMKM];
+        const wadah = document.getElementById("umkmDetail");
+
+        if (produk) {
+            document.title = produk.nama + " | Jelajah Ciamis";
+
+            wadah.innerHTML = `
+                <a href="index.html#umkm" class="back-button">
+                    <i class="bi bi-arrow-left"></i> Kembali ke UMKM Lokal
+                </a>
+
+                <article class="umkm-detail-card">
+                    <div class="umkm-detail-visual">
+                        <i class="bi ${produk.ikon}"></i>
+                    </div>
+
+                    <div class="umkm-detail-content">
+                        <span class="umkm-detail-category">
+                            ${produk.kategori}
+                        </span>
+
+                        <h1>${produk.nama}</h1>
+
+                        <p class="umkm-detail-description">
+                            ${produk.deskripsi}
+                        </p>
+
+                        <div class="umkm-detail-info">
+                            <div class="umkm-info-box">
+                                <h3><i class="bi bi-tag"></i> Kategori Produk</h3>
+                                <p>${produk.kategori}</p>
+                            </div>
+
+                            <div class="umkm-info-box">
+                                <h3><i class="bi bi-geo-alt"></i> Lokasi Usaha</h3>
+                                <p>${produk.lokasi}</p>
+                            </div>
+
+                            <div class="umkm-info-box">
+                                <h3><i class="bi bi-whatsapp"></i> Kontak WhatsApp</h3>
+                                <p>${produk.whatsapp ? `<a href="https://wa.me/62${produk.whatsapp.replace(/^0/, '')}" target="_blank" rel="noopener">${produk.whatsapp}</a>` : "Informasi kontak belum tersedia."}</p>
+                            </div>
+                        </div>
+
+                        <a href="index.html#umkm" class="umkm-back">
+                            <i class="bi bi-arrow-left"></i>
+                            Kembali ke Katalog UMKM
+                        </a>
+                    </div>
+                </article>
+            `;
+        } else {
+            wadah.innerHTML = `
+                <div class="umkm-not-found">
+                    <h2>Produk Tidak Ditemukan</h2>
+                    <p>Maaf, informasi UMKM yang kamu cari belum tersedia.</p>
+                    <br>
+                    <a href="index.html#umkm" class="umkm-back">
+                        Kembali ke Halaman Utama
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
